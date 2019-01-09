@@ -18,7 +18,7 @@
         "curly": "error",
         "dot-notation": "error",
         "eqeqeq": "error",
-        "no-empty-function": "error",
+        "no-empty-function": 0,
         "no-multi-spaces": "error",
         "no-unused-vars": "error",
         "camelcase": "error",
@@ -35,6 +35,9 @@
             "error",
             "always"
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "parserOptions": {
+            "ecmaVersion": 2017
+        }
     }
 }

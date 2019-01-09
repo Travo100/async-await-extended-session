@@ -1,6 +1,7 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var userContoller = require("./../controllers/usersController");
 
 module.exports = function(app) {
   // Get all examples
@@ -59,6 +60,11 @@ module.exports = function(app) {
       .catch(function(err) {
         res.status(422).json(err.errors[0].message);
       });
+  });
+
+  app.get("/api/users", async function (req, res) {
+    var users = await userContoller.findAll();
+    res.json(users);
   });
 
   // Route for logging user out
