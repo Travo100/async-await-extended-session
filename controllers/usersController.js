@@ -58,21 +58,21 @@ var User = {
   }
 };
 
+// Using async/await here
 // async function findAllUserThenGetOne() {
 //   try {
 //     var allUsers = await User.findAll();
 //     var findOneUser = await User.findUserById(1);
-  
 //     console.log("allUsers", allUsers);
 //     console.log("oneUser", findOneUser);
 //   } catch(e) {
 //     console.log(e);
 //   }
-
 // }
 
 // findAllUserThenGetOne();
 
+// using promises here
 // User.findAll()
 //   .then(function(data) {
 //     console.log(data);

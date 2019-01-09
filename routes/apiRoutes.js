@@ -62,7 +62,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/users", async function (req, res) {
+  app.get("/api/users", async function(req, res) {
     var users = await userContoller.findAll();
     res.json(users);
   });
